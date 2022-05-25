@@ -1,7 +1,10 @@
 .table-container
 {
     width: 100%;
-    border: 2px solid darkmagenta;
+    border: 2px solid #0984e3;
+    background-color: #0984e3;
+    color: #dfe6e9;
+    border-radius: 5px;
     flex-direction: column;
     padding: 20px 5px;
 }
