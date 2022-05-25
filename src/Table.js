@@ -11,6 +11,11 @@ function Table(props)
             return `${props.tableNum} is not a valid number`;
         }
 
+        if(props.tableUpto > 15 || props.tableUpto < 1)
+        {
+            return `ERROR: The table range is from 1 - 15`;
+        }
+
         else
         {
             let tableLength = [];
