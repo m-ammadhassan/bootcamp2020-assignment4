@@ -37,5 +37,3 @@ jobs:
         
       - name: Deploy on Surge
         run: surge ./build http://ammad-bootcamp2020-assignment-4.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
-
-
