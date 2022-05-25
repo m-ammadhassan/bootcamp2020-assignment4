@@ -15,9 +15,9 @@ function App() {
       </header>
 
       <main>
-        <h2>Table Calculator</h2>
+        <h2>Mathematics Table Calculator</h2>
 
-        <div className="flex">
+        <div className="table flex">
 
           <div className="table-head">
             

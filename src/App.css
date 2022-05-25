@@ -23,6 +23,7 @@ main
 
 main h2
 {
+  font-size: 2.25em;
   text-align: center;
   padding: 20px 0;
 }
@@ -37,6 +38,7 @@ main .table-head, main .table-display
 .table-head
 {
   border: 2px solid #2d3436;
+  border-radius: 5px;
 }
 
 .table-head .table-msg
@@ -52,10 +54,12 @@ main .table-head, main .table-display
 
 .table-head .table-num
 {
+  min-width: 80px;
+  text-align: center;
   border: 2px solid #2d3436;
   border-radius: 5px;
   font-size: 2em;
-  padding: 10px 40px;
+  padding: 10px 0;
 }
 
 .table-head .table-buttons
@@ -67,6 +71,42 @@ main .table-head, main .table-display
 .table-btn
 {
   font-size: 2em;
+  border: 2px solid #2d3436;
   border-radius: 50%;
   padding: 5px 15px;
+}
+
+@media screen and (max-width: 768px) {
+  main .table
+  {
+    flex-direction: column;
+  }
+
+  main .table-head, main .table-display
+  {
+    width: 80%;
+  }
+
+  main .table-display
+  {
+    background-color: #0984e3;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  main .table-head, main .table-display
+  {
+    width: 100%;
+  }
+
+  main .table .table-msg
+  {
+    flex-direction: column;
+  }
+
+  main .table-msg .table-num
+  {
+    margin: 15px 0 0 0;
+  }
 }
