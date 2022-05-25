@@ -1,0 +1,21 @@
+.table-container
+{
+    width: 100%;
+    border: 2px solid darkmagenta;
+    flex-direction: column;
+    padding: 20px 5px;
+}
+
+.table-row
+{
+    width: 50%;
+    display: flex;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.table-row div
+{
+    width: 20%;
+    font-size: 1.25em;
+}

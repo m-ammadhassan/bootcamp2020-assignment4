@@ -1,24 +1,70 @@
-import logo from './logo.svg';
+import { tab } from '@testing-library/user-event/dist/tab';
+import React, {useState} from 'react';
 import './App.css';
+import Table from './Table';
 
 function App() {
+
+  let [tableNum, setTableNum] = useState(1);
+  let [tableUpto, setTableUpto] = useState(1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>Assignment Title : <span>useState Hook, Teranary Operator & CSS</span></h1>
       </header>
-    </div>
+
+      <main>
+        <h2>Table Calculator</h2>
+
+        <div className="flex">
+
+          <div className="table-head">
+            
+            <div className="flex table-msg">
+              <h4>Display Table Of</h4>
+              <div className="table-num">
+                {tableNum}
+              </div>
+            </div>
+
+            <div className="flex table-buttons">
+              <button className="table-btn" onClick={ ()=>{ setTableNum(tableNum+1) } }>
+                &#43;
+              </button>
+
+              <button className="table-btn" onClick={ ()=>{ setTableNum(tableNum-1) } }>
+                &minus;
+              </button>
+            </div>
+
+            <div className="flex table-msg">
+              <h4>Display Table Upto</h4>
+              <div className="table-num">
+                {tableUpto}
+              </div>
+            </div>
+
+            <div className="flex table-buttons">
+              <button className="table-btn" onClick={ ()=>{ setTableUpto(tableUpto+1) } }>
+                &#43;
+              </button>
+
+              <button className="table-btn" onClick={ ()=>{ setTableUpto(tableUpto-1) } }>
+                &minus;
+              </button>
+            </div>
+
+          </div>
+
+
+          <div className="table-display flex">
+            <Table tableNum = {tableNum} tableUpto = {tableUpto}/>
+          </div>
+        </div>
+
+      </main>
+    </>
   );
 }
 
