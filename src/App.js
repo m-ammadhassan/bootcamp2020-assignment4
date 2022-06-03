@@ -6,6 +6,7 @@ function App() {
 
   let [tableNum, setTableNum] = useState(1);
   let [tableUpto, setTableUpto] = useState(1);
+  let [greetingTime, setGreetingTime] = useState(true);
 
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       </header>
 
       <main>
+        <h3>Good {greetingTime ? 'Morning':'Evening'}</h3>
         <h2>Mathematics Table Calculator</h2>
 
         <div className="table flex">
